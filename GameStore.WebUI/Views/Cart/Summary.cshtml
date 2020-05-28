@@ -1,0 +1,20 @@
+﻿@model GameStore.Domain.Entities.Cart
+
+<div class="navbar-right hidden-xs">
+    @Html.ActionLink("Заказать", "Index", "Cart",
+    new { returnUrl = Request.Url.PathAndQuery },
+    new { @class = "btn btn-default navbar-btn" })
+</div>
+
+<div class="navbar-right visible-xs">
+    <a href=@Url.Action("Index", "Cart", new { returnUrl = Request.Url.PathAndQuery })
+       class="btn btn-default navbar-btn">
+        <span class="glyphicon glyphicon-shopping-cart"></span>
+    </a>
+</div>
+
+<div class="navbar-text navbar-right">
+    <b class="hidden-xs">Ваша корзина:</b>
+    @Model.Lines.Sum(x => x.Quantity) игр,
+    @Model.ComputeTotalValue().ToString("# руб")
+</div>
