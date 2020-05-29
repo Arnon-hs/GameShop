@@ -14,9 +14,6 @@ namespace GameStore.Domain.Entities
         [Display(Name = "Второй адрес")]
         public string Line2 { get; set; }
 
-        [Display(Name = "Третий адрес")]
-        public string Line3 { get; set; }
-
         [Required(ErrorMessage = "Укажите город")]
         [Display(Name = "Город")]
         public string City { get; set; }

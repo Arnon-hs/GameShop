@@ -8,8 +8,8 @@ namespace GameStore.Domain.Concrete
 {
     public class EmailSettings
     {
-        public string MailToAddress = "orders@example.com";
-        public string MailFromAddress = "gamestore@example.com";
+        public string MailToAddress = "vasya09082001@gmail.com";
+        public string MailFromAddress = "vasya09082001@gmail.com";
         public bool UseSsl = true;
         public string Username = "MySmtpUsername";
         public string Password = "MySmtpPassword";
@@ -42,8 +42,7 @@ namespace GameStore.Domain.Concrete
 
                 if (emailSettings.WriteAsFile)
                 {
-                    smtpClient.DeliveryMethod
-                        = SmtpDeliveryMethod.SpecifiedPickupDirectory;
+                    smtpClient.DeliveryMethod = SmtpDeliveryMethod.SpecifiedPickupDirectory;
                     smtpClient.PickupDirectoryLocation = emailSettings.FileLocation;
                     smtpClient.EnableSsl = false;
                 }
@@ -56,7 +55,7 @@ namespace GameStore.Domain.Concrete
                 foreach (var line in cart.Lines)
                 {
                     var subtotal = line.Game.Price * line.Quantity;
-                    body.AppendFormat("{0} x {1} (итого: {2:c}", 
+                    body.AppendFormat("{0} x {1} (итого: {2:c})\n", 
                         line.Quantity, line.Game.Name, subtotal);
                 }
 
@@ -66,7 +65,6 @@ namespace GameStore.Domain.Concrete
                     .AppendLine(shippingInfo.Name)
                     .AppendLine(shippingInfo.Line1)
                     .AppendLine(shippingInfo.Line2 ?? "")
-                    .AppendLine(shippingInfo.Line3 ?? "")
                     .AppendLine(shippingInfo.City)
                     .AppendLine(shippingInfo.Country)
                     .AppendLine("---")

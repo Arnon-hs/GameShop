@@ -76,3 +76,4 @@ C:\Users\hotpe\source\repos\GameStoreMVC5\GameStore.UnitTests\obj\Debug\GameStor
 C:\Users\hotpe\source\repos\GameStoreMVC5\GameStore.UnitTests\obj\Debug\GameStore.UnitTests.csproj.CopyComplete
 C:\Users\hotpe\source\repos\GameStoreMVC5\GameStore.UnitTests\obj\Debug\GameStore.UnitTests.dll
 C:\Users\hotpe\source\repos\GameStoreMVC5\GameStore.UnitTests\obj\Debug\GameStore.UnitTests.pdb
+C:\Users\hotpe\source\repos\GameStoreMVC5\GameStore.UnitTests\bin\Debug\GameStore.UnitTests.dll.config
