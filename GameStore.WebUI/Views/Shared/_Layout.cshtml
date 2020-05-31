@@ -14,6 +14,22 @@
             margin-left: 15px;
         }
     </style>
+    <script>
+       // document.addEventListener('keydown', function (event) {
+         //  alert('Ошибка при заполнении данных');
+       // });
+        //var evt = new KeyboardEvent('keydown', { 'keyCode': 40, 'which': 40 });
+        //document.dispatchEvent(evt);
+        function moveRect(e){
+            switch(e.keyCode){
+                case 40:   // если нажата клавиша вниз
+                    alert('Ошибка при заполнении данных');
+                    break;
+            }
+        }
+ 
+    addEventListener("keydown", moveRect);
+    </script>
 </head>
 <body>
     <div class="navbar navbar-inverse" role="navigation">
